@@ -10,7 +10,7 @@ int main(){
   int sum = 0;
   lb = 0;
   scanf("%d%d", &n, &k);
-  ub = 100000000/k;
+  ub = 100000000;
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
