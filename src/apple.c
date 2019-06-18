@@ -13,12 +13,18 @@ int main(){
   ub = 100000000/k;
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-    sum += A[i];
   }
   while(ub-lb>1){
+    sum = 0;
     int m = (lb+ub)/2;
-    if((sum/m)<k) lb = m;
-    else ub = m;
+    for(i = 0; i < n; i++){
+        sum = sum + (A[i]+m-1)/m;
+    }
+    if(sum>k){
+        lb = m;
+    }else{
+        ub = m;
+    }
   }
   printf("%d\n", ub);
   return 0;
