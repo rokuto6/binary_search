@@ -10,10 +10,12 @@ int main(){
   int sum = 0;
   lb = 0;
   scanf("%d%d", &n, &k);
-  ub = 1000000000;
+  int max = 0;
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
+    if(max<A[i]) max = A[i];
   }
+  ub = max;
   while(ub-lb>1){
     sum = 0;
     int m = (lb+ub)/2;
