@@ -8,7 +8,7 @@ int sum = 0;
 int p(int x){
     int asum = 0;
     int count = 1;
-    for(i = 0; i <= n; i++){
+    for(i = 0; i < n; i++){
         if(A[i] > x) return 0;
         if(asum + A[i] <= x) asum += A[i];
         else{
